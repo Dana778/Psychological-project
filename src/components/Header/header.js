@@ -10,11 +10,13 @@ export const Header = ({hHeader}) => {
     const TxtBt4 = 'Дополнительная информация'
     */
 
+    /* <Button but_state={setStateButton} stateButton = {stBt1} name = {TxtBt1} /> */
+
     return(
         <HeaderStyle>
         <HText>{hHeader}</HText> 
         <MainNavStyle>
-            <Button but_state={setStateButton} stateButton = {stBt1} name = {TxtBt1} />
+            <ButtonStyle> Общая информация </ButtonStyle>
             <ButtonStyle>Тесты </ButtonStyle>
             <ButtonStyle>Психологи</ButtonStyle> 
             <ButtonStyle>Дополнительная информация </ButtonStyle>
