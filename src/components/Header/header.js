@@ -1,10 +1,24 @@
-import React from "react";
-import { HeaderStyle } from "./style";
+import {useState} from "react";
+import { ButtonStyle, HeaderStyle, HText, MainNavStyle } from "./style";
+import Button from "./button";
 
 export const Header = ({hHeader}) => {
+    const [[stBt1, stBt2, stBt3, stBt4], setStateButton] = useState([false, false, false, false]) 
+    const TxtBt1 = 'Общая информация'
+   /* const TxtBt2 = 'Тесты'
+    const TxtBt3 = 'Психологи'
+    const TxtBt4 = 'Дополнительная информация'
+    */
+
     return(
         <HeaderStyle>
-        <p>{hHeader}</p> 
+        <HText>{hHeader}</HText> 
+        <MainNavStyle>
+            <Button but_state={setStateButton} stateButton = {stBt1} name = {TxtBt1} />
+            <ButtonStyle>Тесты </ButtonStyle>
+            <ButtonStyle>Психологи</ButtonStyle> 
+            <ButtonStyle>Дополнительная информация </ButtonStyle>
+        </MainNavStyle> 
         </HeaderStyle>
        
     )

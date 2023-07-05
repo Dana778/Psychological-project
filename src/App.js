@@ -1,14 +1,13 @@
 import React from "react";
-import {Header} from './components/Header/header'; //какого хуя
-import { MainStyle } from "./main_style";
+import {Header} from './components/Header/header'; 
 
 const App = () => {
   
     const hHead = 'Психологическая помощь'
     return (
-    <MainStyle> //он меня игнорирует
+    <div className="mainstyle"> 
       <Header hHeader = {hHead}/>
-    </MainStyle>
+    </div>
     ); 
   
  
