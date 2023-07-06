@@ -1,6 +1,7 @@
 import React from "react";
 import {Header} from './components/Header/header'; 
 import {Body} from './components/Body/body'
+//import 'global_style'
 
 import {
   Routes,
