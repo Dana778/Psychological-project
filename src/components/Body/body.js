@@ -7,7 +7,7 @@ import { Button } from './button';
 export const Body = ({hBody}) => {
     const [stateBody, setStateBody] = useState(true) 
     return(
-        <>
+        <div style={{paddingTop: 200}}>
         <BodyTextStyle>
         <p>Тесты по определения своего типажа традиционно занимают первые строчки просмотров. 
         Женщины отождествляют себя с именами греческих богинь, мужчины пытаются распознать в себе командира или рядового, 
@@ -35,7 +35,7 @@ export const Body = ({hBody}) => {
         <p><Button func_state={setStateBody} stateButton = {stateBody}/></p>
         <BodyTitleStyle id="psychos">Психологи</BodyTitleStyle>  
         <BodyTitleStyle id="add_info">Дополнительная информация</BodyTitleStyle>  
-        </>
+        </div>
        
     )
 }

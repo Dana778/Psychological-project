@@ -1,8 +1,8 @@
 import React from "react";
 import { ButtonStyle, MainNavStyle, ActiveLinksStyle, LinksStyle } from "./style";
 
-export const ButtonNavigation = ({href, name}) => {
-    return(
+export const ButtonNavigation = ({ href, name }) => {
+    return (
         <MainNavStyle>
             <LinksStyle href={href}>{name}</LinksStyle>
         </MainNavStyle>
@@ -14,5 +14,5 @@ export const ButtonNavigation = ({href, name}) => {
     else {
         return <MainNavStyle onClick={buttonClick}>  <ButtonStyle name/> </MainNavStyle>
     }  
-    */  
+    */
 }

@@ -1,13 +1,14 @@
 import styled from 'styled-components';//если я хочу задать общие параметры стиля, где это сделать?
 
 export const HeaderStyle = styled.div`
-    width: 100%;
+    width: 100vw;
     height: 150px;
-    display: flex;
-    display: grid;
     align-items: center;
+    box-sizing: border-box;
     margin: 0;
     justify-content: center ;
+    position: fixed;
+    top: 0;  
 `;
 
 export const TitleStyle = styled.div`
@@ -21,6 +22,7 @@ export const TitleStyle = styled.div`
     justify-content: center ;
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
+    
 `;
 
 export const MainNavStyle = styled.div`
@@ -45,8 +47,21 @@ export const ButtonStyle = styled.button`
 
 export const LinksStyle = styled.a`
     color: #f2f2f2;
-    font-size: 17px;
+    font-size: 17px;//неправильно, должен изменятся вмесье с окном
     text-decoration-color: #333;
+    cursor: pointer;
+`;
+
+export const TLinksStyle = styled.a`
+    text-decoration-color: rgb(135, 129, 140);
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+`;
+
+
+export const PicPointer = styled.div`
+    cursor: pointer;
 `;
 
 export const LinksOnHoverStyle = styled`//a:hover
