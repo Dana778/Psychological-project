@@ -4,6 +4,11 @@ import { HomePic } from "./HomeLincs/homepic";
 import { TitleLink } from "./HomeLincs/title";
 import { ButtonNavigation } from "./buttonNav";
 
+
+import Grid from '@mui/material/Grid';
+
+
+
 export const Header = ({ hHeader }) => {
     //const [buttons, setStateButton] = useState([false, false, false, false]) //
     const TxtBt1 = 'Общая информация'

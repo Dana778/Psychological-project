@@ -1,13 +1,14 @@
 import {useState} from "react";
 import { BodyTitleStyle , BodyTextStyle} from "./style";
 //import {ButtonNavigation} from "../Header/buttonNav";
+
 import { Button } from './button';
 
 
 export const Body = ({hBody}) => {
     const [stateBody, setStateBody] = useState(true) 
     return(
-        <div style={{paddingTop: 200}}>
+        <div style={{paddingTop: 160}}>
         <BodyTextStyle>
         <p>Тесты по определения своего типажа традиционно занимают первые строчки просмотров. 
         Женщины отождествляют себя с именами греческих богинь, мужчины пытаются распознать в себе командира или рядового, 
