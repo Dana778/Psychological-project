@@ -1,6 +1,8 @@
 import {useState} from "react";
 import { BodyTitleStyle , BodyTextStyle} from "./style";
-import {Button} from "./button";
+//import {ButtonNavigation} from "../Header/buttonNav";
+import { Button } from './button';
+
 
 export const Body = ({hBody}) => {
     const [stateBody, setStateBody] = useState(true) 
@@ -17,7 +19,8 @@ export const Body = ({hBody}) => {
         Карл Юнг и многое другое
         </p>
         </BodyTextStyle>
-        <BodyTitleStyle>Общая информация</BodyTitleStyle>  
+        
+        <BodyTitleStyle id="main_info">Общая информация</BodyTitleStyle>  
         <BodyTextStyle>
         <p>Профессиональные психологи слово психотип практически не используют, предпочитая понятия: личности, характера, индивидуальности, стиля и темперамента. 
         </p>
@@ -28,8 +31,10 @@ export const Body = ({hBody}) => {
         <p>Психологическая типология разрабатывалась для того, чтобы по внешним признакам спрогнозировать поведение человека, определить его тип мышления, выявить потенциально сильные или слабые стороны, выбрать необходимую линию поведения, возможные техники манипулирования. Первые попытки «рассортировать» людей по психологическим особенностям личности предприняли астрологи. Позже типологией занялись психиатры, которым нужно было прогнозировать поведение пациентов с психопатологией и назначать лечение.
         </p>
         </BodyTextStyle> 
-        <BodyTitleStyle>Тест</BodyTitleStyle>  
+        <BodyTitleStyle id="tests">Тест</BodyTitleStyle>  
         <p><Button func_state={setStateBody} stateButton = {stateBody}/></p>
+        <BodyTitleStyle id="psychos">Психологи</BodyTitleStyle>  
+        <BodyTitleStyle id="add_info">Дополнительная информация</BodyTitleStyle>  
         </>
        
     )

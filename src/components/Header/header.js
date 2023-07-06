@@ -1,16 +1,18 @@
 import {useState} from "react";
 import { ButtonStyle, HeaderStyle, HText, MainNavStyle, TitleStyle } from "./style";
 import {HomePic} from "./homepic";
+import { ButtonNavigation } from "./buttonNav";
 
 export const Header = ({hHeader}) => {
-    const [buttons, setStateButton] = useState([false, false, false, false]) 
+    const [buttons, setStateButton] = useState([false, false, false, false]) //
     const TxtBt1 = 'Общая информация'
-    const ButtonHome = <img src="./pschypic.png" width="35" height="30"/>
-    const [stateBody, setStateBody] = useState(true) 
-   /* const TxtBt2 = 'Тесты'
+    const TxtBt2 = 'Тесты'
     const TxtBt3 = 'Психологи'
     const TxtBt4 = 'Дополнительная информация'
-    */
+    //const [stateBt1, setStateBt1] = useState(false)
+    const ButtonHome = <img src="./pschypic.png" width="35" height="30"/>
+    const [stateBody, setStateBody] = useState(true) 
+
 
     /* <Button but_state={setStateButton} stateButton = {stBt1} name = {TxtBt1} /> */
 
@@ -23,10 +25,10 @@ export const Header = ({hHeader}) => {
             </div>
         </TitleStyle>
         <MainNavStyle>
-            <ButtonStyle> Общая информация </ButtonStyle>
-            <ButtonStyle>Тесты </ButtonStyle>
-            <ButtonStyle>Психологи</ButtonStyle> 
-            <ButtonStyle>Дополнительная информация </ButtonStyle>
+            <ButtonStyle><ButtonNavigation href='#main_info' name = {TxtBt1} /></ButtonStyle>
+            <ButtonStyle><ButtonNavigation href ='#tests' name = {TxtBt2} /> </ButtonStyle> 
+            <ButtonStyle><ButtonNavigation href ='#psychos' name = {TxtBt3} /> </ButtonStyle> 
+            <ButtonStyle><ButtonNavigation href ='#add_info' name = {TxtBt4} /> </ButtonStyle> 
         </MainNavStyle> 
         </HeaderStyle>      
     )

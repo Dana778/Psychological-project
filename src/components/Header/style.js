@@ -43,6 +43,12 @@ export const ButtonStyle = styled.button`
     overflow: hidden;
 `;
 
+export const LinksStyle = styled.a`
+    color: #f2f2f2;
+    font-size: 17px;
+    text-decoration-color: #333;
+`;
+
 export const LinksOnHoverStyle = styled`//a:hover
     background-color: #ddd;
     color: black;
