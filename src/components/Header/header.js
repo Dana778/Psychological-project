@@ -1,5 +1,5 @@
 import {useState} from "react";
-import { ButtonStyle, HeaderStyle, HText, MainNavStyle } from "./style";
+import { ButtonStyle, HeaderStyle, HText, MainNavStyle, TitleStyle } from "./style";
 import Button from "./button";
 
 export const Header = ({hHeader}) => {
@@ -14,7 +14,7 @@ export const Header = ({hHeader}) => {
 
     return(
         <HeaderStyle>
-        <HText>{hHeader}</HText> 
+        <TitleStyle>{hHeader}</TitleStyle>
         <MainNavStyle>
             <ButtonStyle> Общая информация </ButtonStyle>
             <ButtonStyle>Тесты </ButtonStyle>
