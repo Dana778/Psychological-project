@@ -25,8 +25,8 @@ export const Header = ({ hHeader }) => {
 
     return (
         <HeaderStyle>
-            <TitleStyle>
-                <div style={{ display: 'flex', flexDirection: 'row' }}>
+            <TitleStyle >
+                <div style={{ display: 'flex', flexDirection: 'row'}}>
                     <p><HomePic p_object={ButtonHome} /></p>
                     <p><TitleLink t_objest={hHeader} /></p>
                 </div>

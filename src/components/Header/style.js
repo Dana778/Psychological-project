@@ -9,6 +9,7 @@ export const HeaderStyle = styled.div`
     justify-content: center ;
     position: fixed;
     top: 0;  
+    left:0;
 `;
 
 export const TitleStyle = styled.div`
@@ -16,13 +17,14 @@ export const TitleStyle = styled.div`
     height: 100px;
     display: flex;
     display: grid;
-    align-items: center;
+    align-items: stretch;
     margin: 0;
     background-color: rgb(135, 129, 140);
     justify-content: center ;
     font-size: 40px;
     font-family: Arial, Helvetica, sans-serif;
     
+
 `;
 
 export const MainNavStyle = styled.div`

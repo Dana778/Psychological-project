@@ -1,7 +1,8 @@
 import React from "react";
 import { Header } from './components/Header/header';
 import { Body } from './components/Body/body'
-//import 'global_style'
+import { AppLayout } from "./global_style";
+import { ResultStyle } from "./components2/Body/style";
 
 import {
   Routes,
@@ -9,11 +10,12 @@ import {
   BrowserRouter,
 } from 'react-router-dom'
 
+
 const App = () => {
 
   const hHead = 'Психологическая помощь'
   return (
-    <div className="mainstyle">
+    <AppLayout>
       <BrowserRouter>
         <Header hHeader={hHead} />
         <Routes>
@@ -21,13 +23,13 @@ const App = () => {
             <Body hBody={''} />
           } />
           <Route path='/results' element={
-            <p>ты молодец</p>
+            <ResultStyle style={{paddingTop: 160, left:0}}>ты молодец</ResultStyle>
           } />
         </Routes>
 
       </BrowserRouter>
 
-    </div>
+    </AppLayout>
   );
 
 
