@@ -1,10 +1,12 @@
 import {useState} from "react";
 import { ButtonStyle, HeaderStyle, HText, MainNavStyle, TitleStyle } from "./style";
-import Button from "./button";
+import {HomePic} from "./homepic";
 
 export const Header = ({hHeader}) => {
     const [[stBt1, stBt2, stBt3, stBt4], setStateButton] = useState([false, false, false, false]) 
     const TxtBt1 = 'Общая информация'
+    const ButtonHome = <img src="./pschypic.png" width="35" height="30"/>
+    const [stateBody, setStateBody] = useState(true) 
    /* const TxtBt2 = 'Тесты'
     const TxtBt3 = 'Психологи'
     const TxtBt4 = 'Дополнительная информация'
@@ -16,7 +18,7 @@ export const Header = ({hHeader}) => {
         <HeaderStyle>       
         <TitleStyle>
             <div>
-            <img src="../pschypic.png" width="50" height="50"/>
+            <p><HomePic func_state={setStateBody} stateButton = {ButtonHome}/></p>
             {hHeader}
             </div>
         </TitleStyle>

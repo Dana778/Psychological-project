@@ -1,6 +1,6 @@
 import {useState} from "react";
 import { BodyTitleStyle , BodyTextStyle} from "./style";
-import Button from "./button";
+import {Button} from "./button";
 
 export const Body = ({hBody}) => {
     const [stateBody, setStateBody] = useState(true) 
