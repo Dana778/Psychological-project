@@ -13,8 +13,13 @@ export const Header = ({hHeader}) => {
     /* <Button but_state={setStateButton} stateButton = {stBt1} name = {TxtBt1} /> */
 
     return(
-        <HeaderStyle>
-        <TitleStyle>{hHeader}</TitleStyle>
+        <HeaderStyle>       
+        <TitleStyle>
+            <div>
+            <img src="../pschypic.png" width="50" height="50"/>
+            {hHeader}
+            </div>
+        </TitleStyle>
         <MainNavStyle>
             <ButtonStyle> Общая информация </ButtonStyle>
             <ButtonStyle>Тесты </ButtonStyle>
