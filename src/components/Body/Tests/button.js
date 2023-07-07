@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { ContainerButton } from "./style.js";
+import { ContainerButton } from "../style.js";
 export const Button = ({func_state, stateButton}) => {
     const navigate = useNavigate()
 
