@@ -5,6 +5,7 @@ export const BodyTitleStyle = styled.div`
     display: block;
     font-size: 1.5em;
     margin-top: 0.83em;
+    margin-bottom: 5px;
     padding-top: 160px;
     margin-top: -160px;
     font-weight: bold;
