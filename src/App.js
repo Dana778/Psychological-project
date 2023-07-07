@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { Header } from './components/Header/header';
 import { Body } from './components/Body/body'
 import { AppLayout } from "./global_style";
@@ -12,19 +12,45 @@ import {
 
 
 const App = () => {
-
+  const [finalResult, setFinalResult] = useState(0)
   const hHead = 'Психологическая помощь'
+
+
   return (
     <AppLayout>
       <BrowserRouter>
         <Header hHeader={hHead} />
         <Routes>
           <Route path='/' element={
-            <Body hBody={''} />
+            <Body f_setres={setFinalResult} resreturn={finalResult} />
           } />
-          <Route path='/results' element={
-            <ResultStyle style={{paddingTop: 160, left:0}}>ты молодец</ResultStyle>
-          } />
+          {
+            finalResult === 0 &&
+            <Route path='/results' element={
+              <ResultStyle style={{ left: 0 }}>{finalResult}{'экстраверт'}</ResultStyle>
+            } />
+          }
+          {
+            finalResult === 1 &&
+            <Route path='/results' element={
+              <ResultStyle style={{ left: 0 }}>{finalResult}{'даун'}</ResultStyle>
+            } />
+          }
+          {
+            finalResult === 2 &&
+            <Route path='/results' element={
+              <ResultStyle style={{ left: 0 }}>{finalResult}{'fvhehgf'}</ResultStyle>
+            } />
+          }
+          {
+            finalResult === 3 &&
+            <Route path='/results' element={
+              <ResultStyle style={{ left: 0 }}>{finalResult}{'лузер'}</ResultStyle>
+            } />
+          }
+
+
+
         </Routes>
 
       </BrowserRouter>

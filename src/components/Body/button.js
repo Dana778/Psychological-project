@@ -1,7 +1,10 @@
+import { useNavigate } from "react-router-dom";
 import { ContainerButton } from "./style.js";
 export const Button = ({func_state, stateButton}) => {
+    const navigate = useNavigate()
+
     const buttonClick = () => {
-        window.location.replace('/results')
+        navigate('/results')
     }
 
     return <ContainerButton onClick={buttonClick}>
