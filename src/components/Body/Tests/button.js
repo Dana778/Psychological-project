@@ -8,6 +8,6 @@ export const Button = ({func_state, stateButton}) => {
     }
 
     return <ContainerButton onClick={buttonClick}>
-        кнопка
+        Узнать свой результат
     </ContainerButton>
 }
