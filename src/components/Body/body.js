@@ -13,8 +13,6 @@ export const Body = ({ f_setres, resreturn }) => {
     const [result, setResult] = useState()
     let [questions, setQuestions] = useState([0, 0, 0, 0])
 
-
-
     return (
         <div style={{ paddingTop: 150, left: 0 }}>
             <BodyTextStyle>
@@ -40,6 +38,7 @@ export const Body = ({ f_setres, resreturn }) => {
 
             <BodyTitleStyle id="tests">Тест</BodyTitleStyle>
             <BodyTextStyle>
+                <Problem question={'Как вы относитесь к недостаткам других людей?'} ans1={'Я нетерпим к недостаткам других.'} ans2={'Я принимаю людей такими, какие они есть.'} ans3={'Обычно я рассудителен и осторожен с окружающими.'} ans4={'Я предъявляю высокие требования и к себе и окружающим.'} result={result} questions={questions} setResult={setResult} setQuestions={setQuestions} f_setres={f_setres} resreturn={resreturn}/>
                 <Problem question={'Как вы относитесь к недостаткам других людей?'} ans1={'Я нетерпим к недостаткам других.'} ans2={'Я принимаю людей такими, какие они есть.'} ans3={'Обычно я рассудителен и осторожен с окружающими.'} ans4={'Я предъявляю высокие требования и к себе и окружающим.'} result={result} questions={questions} setResult={setResult} setQuestions={setQuestions} f_setres={f_setres} resreturn={resreturn}/>
                 <p><Button func_state={setStateBody} stateButton={Math.max(questions)} /></p>
             </BodyTextStyle>
