@@ -5,7 +5,10 @@ import { BasicCard } from "./psychologist/personCard";
 import { textTop1, textTop2, textMain1, textMain2, textMain3, textMain4, lor } from "./data";
 import psy2 from '../Body/psychologist/psy2.jpeg'
 import psy1 from '../Body/psychologist/psy1.jpeg'
+import psy3 from '../Body/psychologist/psy3.jpeg'
+import psy4 from '../Body/psychologist/psy4.png'
 import { Problem } from "./Tests/problem";
+import { Text1 } from "./data_2";
 
 
 export const f = 23;
@@ -30,12 +33,6 @@ export const Body = ({ f_setres, resreturn }) => {
                 <p>{textMain3}</p>
                 <p>{textMain4}</p>
 
-                <p>{lor}</p>
-                <p>{lor}</p>
-                <p>{lor}</p>
-                <p>{lor}</p>
-                <p>{lor}</p>
-
             </BodyTextStyle>
 
             <BodyTitleStyle id="tests">Тест</BodyTitleStyle>
@@ -46,11 +43,18 @@ export const Body = ({ f_setres, resreturn }) => {
             </BodyTextStyle>
             <BodyTitleStyle id="psychos">Психологи</BodyTitleStyle>
             <div style={{display: 'flex', flexDirection: 'row'}}>
-                <p><BasicCard name={'Светлана'} spec={'Детский психолог'} education={'МГУ'} methods={'Kлиническая психология'} cost={'7000 p'} photo={psy2}></BasicCard></p>
+                <p><BasicCard name={'Светлана'} spec={'Детский психолог'} education={'МГУ'} methods={'Kлиническая психология'} cost={'7000 p'} photo={psy2} tg= {'@Daniella_2019'}></BasicCard></p>
                 <p><BasicCard name={'Владимир'} spec={'Кризисный психолог'} education={'МГУ'} methods={'Когнитивно-поведенческая терапия (КПТ)'} cost={'5000 p'} photo={psy1}></BasicCard></p>
+                <p><BasicCard name={'Вероника'} spec={'Психотерапевт'} education={'МГУ'} methods={'Терапия Принятия и ответственности (АСТ)'} cost={'15000 p'} photo={psy3}></BasicCard></p>
+                <p><BasicCard name={'Сатья'} spec={'Семейный психолог'} education={'МГУ'} methods={'Психоанализ'} cost={'10000 p'} photo={psy4}></BasicCard></p> 
             </div>
 
             <BodyTitleStyle id="add_info">Дополнительная информация</BodyTitleStyle>
+
+            <BodyTextStyle>
+                <Text1/>
+                
+            </BodyTextStyle>
         </div>
 
     )

@@ -8,7 +8,7 @@ import CardMedia from '@mui/material/CardMedia';
 
 export function BasicCard({name, spec, education, methods, cost, photo}) {
   return (
-    <Card sx={{ maxWidth: 400 }} style={{margin: 10}}>
+    <Card sx={{ maxWidth: 350, minWidth: 300, minHeight: 380}} style={{margin: 10}}>
       <CardMedia
       
         sx={{ height: 140 }}
@@ -30,8 +30,8 @@ export function BasicCard({name, spec, education, methods, cost, photo}) {
           Техники и методы: {methods}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button size="small">Просмотреть контат</Button>
+      <CardActions >
+        <Button paddingBottom='5px'  size="small">Записаться на прием</Button>
       </CardActions>
     </Card>
   );
