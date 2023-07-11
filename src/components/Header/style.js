@@ -45,6 +45,9 @@ export const ButtonStyle = styled.button`
     font-size: 17px;
     background-color: #333;
     overflow: hidden;
+
+    
+    padding: theme.spacing(1),
 `;
 
 export const LinksStyle = styled.a`

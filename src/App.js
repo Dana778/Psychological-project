@@ -22,7 +22,7 @@ const App = () => {
         <Header hHeader={hHead} />
         <Routes>
           <Route path='/' element={
-            <Body f_setres={setFinalResult} resreturn={finalResult} />
+            <Body f_setres={setFinalResult} resreturn={finalResult} />  
           } />
           {
             finalResult === 0 &&

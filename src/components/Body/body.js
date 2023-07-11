@@ -1,10 +1,11 @@
 import { useState } from "react";
 import { BodyTitleStyle, BodyTextStyle } from "./style";
 import { Button } from './Tests/button';
-
+import { BasicCard } from "../../psychologist/personCard";
 import { textTop1, textTop2, textMain1, textMain2, textMain3, textMain4, lor } from "./data";
 
 import { Problem } from "./Tests/problem";
+
 
 export const f = 23;
 
@@ -43,6 +44,9 @@ export const Body = ({ f_setres, resreturn }) => {
                 <p><Button func_state={setStateBody} stateButton={Math.max(questions)} /></p>
             </BodyTextStyle>
             <BodyTitleStyle id="psychos">Психологи</BodyTitleStyle>
+            <BasicCard name = {'Светлана'} spec={'Детский психолог'}></BasicCard>
+
+
             <BodyTitleStyle id="add_info">Дополнительная информация</BodyTitleStyle>
         </div>
 
