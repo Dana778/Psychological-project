@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { BodyTitleStyle, BodyTextStyle } from "./style";
 import { Button } from './Tests/button';
-import { BasicCard } from "../../psychologist/personCard";
+import { BasicCard } from "./psychologist/personCard";
 import { textTop1, textTop2, textMain1, textMain2, textMain3, textMain4, lor } from "./data";
-
+import psy2 from '../Body/psychologist/psy2.jpeg'
+import psy1 from '../Body/psychologist/psy1.jpeg'
 import { Problem } from "./Tests/problem";
 
 
@@ -39,13 +40,15 @@ export const Body = ({ f_setres, resreturn }) => {
 
             <BodyTitleStyle id="tests">Тест</BodyTitleStyle>
             <BodyTextStyle>
-                <Problem question={'Как вы относитесь к недостаткам других людей?'} ans1={'Я нетерпим к недостаткам других.'} ans2={'Я принимаю людей такими, какие они есть.'} ans3={'Обычно я рассудителен и осторожен с окружающими.'} ans4={'Я предъявляю высокие требования и к себе и окружающим.'} result={result} questions={questions} setResult={setResult} setQuestions={setQuestions} f_setres={f_setres} resreturn={resreturn}/>
-                <Problem question={'Как вы относитесь к недостаткам других людей?'} ans1={'Я нетерпим к недостаткам других.'} ans2={'Я принимаю людей такими, какие они есть.'} ans3={'Обычно я рассудителен и осторожен с окружающими.'} ans4={'Я предъявляю высокие требования и к себе и окружающим.'} result={result} questions={questions} setResult={setResult} setQuestions={setQuestions} f_setres={f_setres} resreturn={resreturn}/>
+                <Problem question={'Как вы относитесь к недостаткам других людей?'} ans1={'Я нетерпим к недостаткам других.'} ans2={'Я принимаю людей такими, какие они есть.'} ans3={'Обычно я рассудителен и осторожен с окружающими.'} ans4={'Я предъявляю высокие требования и к себе и окружающим.'} result={result} questions={questions} setResult={setResult} setQuestions={setQuestions} f_setres={f_setres} resreturn={resreturn} />
+                <Problem question={'Как вы относитесь к недостаткам других людей?'} ans1={'Я нетерпим к недостаткам других.'} ans2={'Я принимаю людей такими, какие они есть.'} ans3={'Обычно я рассудителен и осторожен с окружающими.'} ans4={'Я предъявляю высокие требования и к себе и окружающим.'} result={result} questions={questions} setResult={setResult} setQuestions={setQuestions} f_setres={f_setres} resreturn={resreturn} />
                 <p><Button func_state={setStateBody} stateButton={Math.max(questions)} /></p>
             </BodyTextStyle>
             <BodyTitleStyle id="psychos">Психологи</BodyTitleStyle>
-            <BasicCard name = {'Светлана'} spec={'Детский психолог'}></BasicCard>
-
+            <div style={{display: 'flex', flexDirection: 'row'}}>
+                <p><BasicCard name={'Светлана'} spec={'Детский психолог'} education={'МГУ'} methods={'Kлиническая психология'} cost={'7000 p'} photo={psy2}></BasicCard></p>
+                <p><BasicCard name={'Владимир'} spec={'Кризисный психолог'} education={'МГУ'} methods={'Когнитивно-поведенческая терапия (КПТ)'} cost={'5000 p'} photo={psy1}></BasicCard></p>
+            </div>
 
             <BodyTitleStyle id="add_info">Дополнительная информация</BodyTitleStyle>
         </div>

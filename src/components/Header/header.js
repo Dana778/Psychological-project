@@ -32,15 +32,16 @@ export const Header = ({ hHeader }) => {
                 </div>
             </TitleStyle>
             <MainNavStyle>
-                <div style={{ display: 'flex', justifyContent: 'center' }}>
-                    <Box sx={{ flexGrow: 1 }}>
-                        <Grid container spacing={1}>
-                            <Grid xs={3}><ButtonStyle><ButtonNavigation href='http://localhost:3000#main_info' name={TxtBt1} /></ButtonStyle></Grid>
-                            <Grid xs={3}><ButtonStyle><ButtonNavigation href='http://localhost:3000#tests' name={TxtBt2} /> </ButtonStyle></Grid>
-                            <Grid xs={3}><ButtonStyle><ButtonNavigation href='http://localhost:3000#psychos' name={TxtBt3} /> </ButtonStyle></Grid>
-                            <Grid xs={3}><ButtonStyle><ButtonNavigation href='http://localhost:3000#add_info' name={TxtBt4} /> </ButtonStyle></Grid>
-                        </Grid>
-                    </Box>
+                <div style={{ display: 'flex' }}>
+                <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={2}>
+
+      <Grid xs={3}><ButtonNavigation href='http://localhost:3000#main_info' name={TxtBt1}></ButtonNavigation></Grid>
+      <Grid xs={3}> <ButtonNavigation href='http://localhost:3000#tests' name={TxtBt2}></ButtonNavigation></Grid>
+      <Grid xs={3}><ButtonNavigation href='http://localhost:3000#psychos' name={TxtBt3}></ButtonNavigation> </Grid>
+      <Grid xs={3}><ButtonNavigation href='http://localhost:3000#add_info' name={TxtBt4}></ButtonNavigation> </Grid>
+                    </Grid>
+    </Box>
                 </div>
 
             </MainNavStyle>

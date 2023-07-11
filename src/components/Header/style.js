@@ -33,28 +33,36 @@ export const MainNavStyle = styled.div`
     height: 50px;
     background-color: #333;
     overflow: hidden;
-`;
 
-
-export const ButtonStyle = styled.button`
-    float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    
     text-decoration: none;
     font-size: 17px;
     background-color: #333;
     overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+`;
 
-    
+
+export const ButtonStyle = styled.div`
     padding: theme.spacing(1),
 `;
 
 export const LinksStyle = styled.a`
     color: #f2f2f2;
-    font-size: 17px;//неправильно, должен изменятся вмесье с окном
+    font-size: 17px;
     text-decoration-color: #333;
     cursor: pointer;
+
+    border: 2px solid rgb(33, 31, 31); /* Рамка */
+    display: inline-block;
+    text-decoration: none; /* Убираем подчёркивание */
+    display: inline-block; /* Строчно-блочный элемент */
+    color: #fff; /* Белый цвет текста */
+    padding: 1rem ; /* Поля вокруг текста */
+    text-decoration: none; /* Убираем подчёркивание */
+    border-radius: 3px; /* Скругляем уголки */
 `;
 
 export const TLinksStyle = styled.a`
