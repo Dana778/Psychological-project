@@ -44,9 +44,9 @@ export const Body = ({ f_setres, resreturn }) => {
             <BodyTitleStyle id="psychos">Психологи</BodyTitleStyle>
             <div style={{display: 'flex', flexDirection: 'row'}}>
                 <p><BasicCard name={'Светлана'} spec={'Детский психолог'} education={'МГУ'} methods={'Kлиническая психология'} cost={'7000 p'} photo={psy2} tg= {'https://t.me/Daniella_2019'}></BasicCard></p>
-                <p><BasicCard name={'Владимир'} spec={'Кризисный психолог'} education={'МГУ'} methods={'Когнитивно-поведенческая терапия (КПТ)'} cost={'5000 p'} photo={psy1} tg= {'https://t.me/Daniella_2019'}></BasicCard></p>
-                <p><BasicCard name={'Вероника'} spec={'Психотерапевт'} education={'МГУ'} methods={'Терапия Принятия и ответственности (АСТ)'} cost={'15000 p'} photo={psy3} tg= {'https://t.me/Daniella_2019'}></BasicCard></p>
-                <p><BasicCard name={'Сатья'} spec={'Семейный психолог'} education={'МГУ'} methods={'Психоанализ'} cost={'10000 p'} photo={psy4} tg= {'https://t.me/Daniella_2019'}></BasicCard></p> 
+                <p><BasicCard name={'Владимир'} spec={'Кризисный психолог'} education={'МГУ'} methods={'Когнитивно-поведенческая терапия (КПТ)'} cost={'5000 p'} photo={psy1} tg= {'https://t.me/terbium65'}></BasicCard></p>
+                <p><BasicCard name={'Вероника'} spec={'Психотерапевт'} education={'МГУ'} methods={'Терапия Принятия и ответственности (АСТ)'} cost={'15000 p'} photo={psy3} tg= {'https://t.me/f1rA5h'}></BasicCard></p>
+                <p><BasicCard name={'Сатья'} spec={'Семейный психолог'} education={'МГУ'} methods={'Психоанализ'} cost={'10000 p'} photo={psy4} tg= {'https://t.me/Vil_vilka'}></BasicCard></p> 
             </div>
 
             <BodyTitleStyle id="add_info">Дополнительная информация</BodyTitleStyle>

@@ -50,5 +50,3 @@ export function Problem({ question, ans1, ans2, ans3, ans4, result, questions, s
 
 }
 
-
-
