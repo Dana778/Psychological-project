@@ -1,12 +1,13 @@
 import * as React from 'react';
 import Card from '@mui/material/Card';
+import {Link} from 'react-router-dom'
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import Button from '@mui/material/Button';
+import { Button } from '@mui/material';
 import Typography from '@mui/material/Typography';
 import CardMedia from '@mui/material/CardMedia';
 
-export function BasicCard({name, spec, education, methods, cost, photo}) {
+export function BasicCard({name, spec, education, methods, cost, photo, tg}) {
   return (
     <Card sx={{ maxWidth: 350, minWidth: 300, minHeight: 380}} style={{margin: 10}}>
       <CardMedia
@@ -31,7 +32,10 @@ export function BasicCard({name, spec, education, methods, cost, photo}) {
         </Typography>
       </CardContent>
       <CardActions >
-        <Button paddingBottom='5px'  size="small">Записаться на прием</Button>
+        <a href={tg}>
+        <Button paddingBottom='5px'  size="small" >Записаться на прием</Button>
+        </a>
+        
       </CardActions>
     </Card>
   );
