@@ -1,10 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { ContainerButton } from "../style.js";
-export const Button = ({func_state, stateButton, res}) => {
+export const Button = ({res}) => {
     const navigate = useNavigate()
     
     const buttonClick = () => {
-        navigate('/results')
+        if (res===0){navigate('/extravert')}
+        if (res===1){navigate('/introvert')}
+        if (res===2){navigate('/choleric')}
+        if (res===3){navigate('/sangvinik')}
     }
 
     return <ContainerButton onClick={buttonClick}>

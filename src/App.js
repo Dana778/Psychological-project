@@ -13,7 +13,7 @@ import {
 
 
 const App = () => {
-  const [finalResult, setFinalResult] = useState(0)
+  const finalResult = -1
   const hHead = 'Психологическая помощь'
 
 
@@ -23,33 +23,25 @@ const App = () => {
         <Header hHeader={hHead} />
         <Routes>
           <Route path='/' element={
-            <Body f_setres={setFinalResult} resreturn={finalResult} />  
+            <Body />
           } />
-          {
-            finalResult === 0 &&
-            <Route path='/results' element={
-              <ResultStyle style={{ left: 0 }}>{'экстраверт'}{<BasicCard name={'Светлана'} spec={'Детский психолог'} education={'МГУ'} methods={'Kлиническая психология'} cost={'7000 p'} photo={psy2} tg={'https://t.me/Daniella_2019'}></BasicCard>
+          <Route path='/extravert' element={
+            <ResultStyle style={{ left: 0 }}>{'экстраверт'}{<BasicCard name={'Светлана'} spec={'Детский психолог'} education={'МГУ'} methods={'Kлиническая психология'} cost={'7000 p'} photo={psy2} tg={'https://t.me/Daniella_2019'}></BasicCard>
             }</ResultStyle>
-            } />
-          }
-          {
-            finalResult === 1 &&
-            <Route path='/results' element={
-              <ResultStyle style={{ left: 0 }}>{finalResult}{'даун'}</ResultStyle>
-            } />
-          }
-          {
-            finalResult === 2 &&
-            <Route path='/results' element={
-              <ResultStyle style={{ left: 0 }}>{finalResult}{'fvhehgf'}</ResultStyle>
-            } />
-          }
-          {
-            finalResult === 3 &&
-            <Route path='/results' element={
-              <ResultStyle style={{ left: 0 }}>{finalResult}{'лузер'}</ResultStyle>
-            } />
-          }
+          } />
+          <Route path='/introvert' element={
+            <ResultStyle style={{ left: 0 }}>{'интроверт'}{<BasicCard name={'Светлана'} spec={'Детский психолог'} education={'МГУ'} methods={'Kлиническая психология'} cost={'7000 p'} photo={psy2} tg={'https://t.me/Daniella_2019'}></BasicCard>
+            }</ResultStyle>
+          } />
+         <Route path='/choleric' element={
+            <ResultStyle style={{ left: 0 }}>{'холер'}{<BasicCard name={'Светлана'} spec={'Детский психолог'} education={'МГУ'} methods={'Kлиническая психология'} cost={'7000 p'} photo={psy2} tg={'https://t.me/Daniella_2019'}></BasicCard>
+            }</ResultStyle>
+          } />
+          <Route path='/sangvinik' element={
+            <ResultStyle style={{ left: 0 }}>{'сангв'}{<BasicCard name={'Светлана'} spec={'Детский психолог'} education={'МГУ'} methods={'Kлиническая психология'} cost={'7000 p'} photo={psy2} tg={'https://t.me/Daniella_2019'}></BasicCard>
+            }</ResultStyle>
+          } />
+         
 
 
 

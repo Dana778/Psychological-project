@@ -6,7 +6,7 @@ import * as React from 'react';
 import { purple } from '@mui/material/colors';
 import { useState } from 'react';
 
-export function Problem({ question, ans1, ans2, ans3, ans4, result, setResult, setQuest }) {
+export function Problem({ question, ans1, ans2, ans3, ans4, result, setResult, quest }) {
     
     return (
         <FormControl>
@@ -19,7 +19,7 @@ export function Problem({ question, ans1, ans2, ans3, ans4, result, setResult, s
                     const questMas = [0, 0, 0, 0]
                     questMas[e.target.value] += 1
                     setQuestions(questMas) */
-                    setQuest(result)
+                    quest = result
                 }}
                 name="radio-buttons-group"
             >

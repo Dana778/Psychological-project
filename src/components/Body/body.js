@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { BodyTitleStyle, BodyTextStyle } from "./style";
-import { Button } from './Tests/button';
+import { Button } from './Tests/TestResult_button';
 import { BasicCard } from "./psychologist/personCard";
 import { textTop1, textTop2, textMain1, textMain2, textMain3, textMain4, lor } from "./data";
 import psy2 from '../Body/psychologist/psy2.jpeg'
@@ -10,37 +10,35 @@ import psy4 from '../Body/psychologist/psy4.png'
 import { Problem } from "./Tests/problem";
 import { Text1 } from "./data_2";
 
-export const Body = ( {finalResult, setFinalResult}) => {
+
+export const Body = () => {
     const [stateBody, setStateBody] = useState(0)
     const [result, setResult] = useState()
-    const [q1, setQ1] = useState()
-    const [q2, setQ2] = useState()
+    const q1 = 0
+    const q2 = 0
     let [questions, setQuestions] = useState([0, 0, 0, 0])
 
     function index_max(arr) {
         var i, maxV, maxP;
-        for( i = 0; i < arr.length; i++) {
-          if( typeof maxV === "undefined" || arr[i] > maxV ) {
-            maxV = arr[i];
-            maxP = i;
-          }
+        for (i = 0; i < arr.length; i++) {
+            if (typeof maxV === "undefined" || arr[i] > maxV) {
+                maxV = arr[i];
+                maxP = i;
+            }
         }
         return maxP;
     }
+    function ResCompiletion(q1, q2) {
+        useEffect(() => {
+            setQuestions(questions.map((item, index) => {
+                if (index === q1) { return (item + 1) } else { return (item) }
+            }));
+            setQuestions(questions.map((item, index) => {
+                if (index === q2) { return (item + 1) } else { return (item) }
+            }))}, [])
 
-    function ResCompiletion(r1, r2) {
-        setQuestions(questions.map((item, index) => {
-            if (index === r1) { return (item + 1) } else { return (item) }
-        }))
-        setQuestions(questions.map((item, index) => {
-            if (index === r2) { return (item + 1) } else { return (item) }
-        }))
-
-        return (
-            { questions }
-        )
+        return questions
     }
-
 
     return (
         <div style={{ paddingTop: 150, left: 0 }}>
@@ -60,10 +58,11 @@ export const Body = ( {finalResult, setFinalResult}) => {
 
             <BodyTitleStyle id="tests">Тест</BodyTitleStyle>
             <BodyTextStyle>
-                <Problem question={'Как вы относитесь к недостаткам других людей?'} ans1={'Я нетерпим к недостаткам других.'} ans2={'Я принимаю людей такими, какие они есть.'} ans3={'Обычно я рассудителен и осторожен с окружающими.'} ans4={'Я предъявляю высокие требования и к себе и окружающим.'} result={result} setResult={setResult} setQuest={setQ1} />
-                <Problem question={'Как вы относитесь к недостаткам других людей?'} ans1={'Я нетерпим к недостаткам других.'} ans2={'Я принимаю людей такими, какие они есть.'} ans3={'Обычно я рассудителен и осторожен с окружающими.'} ans4={'Я предъявляю высокие требования и к себе и окружающим.'} result={result} setResult={setResult} setQuest={setQ2} />
+                <Problem question={'Как вы относитесь к недостаткам других людей?'} ans1={'Я нетерпим к недостаткам других.'} ans2={'Я принимаю людей такими, какие они есть.'} ans3={'Обычно я рассудителен и осторожен с окружающими.'} ans4={'Я предъявляю высокие требования и к себе и окружающим.'} result={result} setResult={setResult} quest={q1} />
+                <Problem question={'Как вы относитесь к недостаткам других людей?'} ans1={'Я нетерпим к недостаткам других.'} ans2={'Я принимаю людей такими, какие они есть.'} ans3={'Обычно я рассудителен и осторожен с окружающими.'} ans4={'Я предъявляю высокие требования и к себе и окружающим.'} result={result} setResult={setResult} quest={q2} />
+                <p><Button res={0} /></p>
+                <button onClick={console.log("ghbcx")}>hi</button>
                 <p>{ResCompiletion({ q1 }, { q2 })}</p>
-                <p><Button func_state={setStateBody} stateButton={index_max(ResCompiletion({ q1 }, { q2 }))} /></p>
             </BodyTextStyle>
             <BodyTitleStyle id="psychos">Психологи</BodyTitleStyle>
             <div style={{ display: 'flex', flexDirection: 'row' }}>
