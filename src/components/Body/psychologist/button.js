@@ -1,13 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { ContainerButton } from "../style.js";
-export const Button = ({func_state, stateButton, res}) => {
+export const Button = ({tg_link}) => {
     const navigate = useNavigate()
-    
+
     const buttonClick = () => {
-        navigate('/results')
+        navigate(tg_link)
     }
 
     return <ContainerButton onClick={buttonClick}>
-        Узнать свой результат
+        Записаться на прием
     </ContainerButton>
 }

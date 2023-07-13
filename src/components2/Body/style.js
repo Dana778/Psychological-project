@@ -5,7 +5,7 @@ export const ResultStyle = styled.div`
     display: block;
     font-size: 20px;
     
-    padding-top: 300px;
+    padding-top: 160px;
     left:0;
       
 `;

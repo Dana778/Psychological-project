@@ -3,7 +3,8 @@ import { Header } from './components/Header/header';
 import { Body } from './components/Body/body'
 import { AppLayout } from "./global_style";
 import { ResultStyle } from "./components2/Body/style";
-
+import { BasicCard } from "./components/Body/psychologist/personCard";
+import psy2 from './components/Body/psychologist/psy2.jpeg'
 import {
   Routes,
   Route,
@@ -27,7 +28,8 @@ const App = () => {
           {
             finalResult === 0 &&
             <Route path='/results' element={
-              <ResultStyle style={{ left: 0 }}>{finalResult}{'экстраверт'}</ResultStyle>
+              <ResultStyle style={{ left: 0 }}>{'экстраверт'}{<BasicCard name={'Светлана'} spec={'Детский психолог'} education={'МГУ'} methods={'Kлиническая психология'} cost={'7000 p'} photo={psy2} tg={'https://t.me/Daniella_2019'}></BasicCard>
+            }</ResultStyle>
             } />
           }
           {

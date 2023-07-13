@@ -6,19 +6,8 @@ import * as React from 'react';
 import { purple } from '@mui/material/colors';
 import { useState } from 'react';
 
-export function Problem({ question, ans1, ans2, ans3, ans4, result, questions, setResult, setQuestions, f_setres, resreturn }) {
-    const [DefaultQuestions, setDQ] = useState()
-    const defaultState = {questions}
-    function index_max(arr) {
-        var i, maxV, maxP;
-        for (i = 0; i < arr.length; i++) {
-            if (typeof maxV === "undefined" || arr[i] > maxV) {
-                maxV = arr[i];
-                maxP = i;
-            }
-        }
-        return maxP;
-    }
+export function Problem({ question, ans1, ans2, ans3, ans4, result, setResult, setQuest }) {
+    
     return (
         <FormControl>
             <FormLabel id="demo-radio-buttons-group-label" style={{color:'black'}}>{question}</FormLabel>
@@ -26,14 +15,11 @@ export function Problem({ question, ans1, ans2, ans3, ans4, result, questions, s
                 aria-labelledby="demo-radio-buttons-group-label"
                 onChange={e => {
                     setResult(e.target.value)
-                    //DefaultQuestions=defaultState
-                    const questMas = [0, 0, 0, 0] //чтобы пользователь мог несколько раз выбрать разные значения в одном вопросе и они не суммировались, а менялись
+                    /*DefaultQuestions=defaultState
+                    const questMas = [0, 0, 0, 0]
                     questMas[e.target.value] += 1
-                    //DefaultQuestions[e.target.value]+=1
-                    //setQuestions(DefaultQuestions)
-                    //f_setres(index_max(DefaultQuestions))
-                    setQuestions(questMas)
-                    f_setres(index_max(questMas))
+                    setQuestions(questMas) */
+                    setQuest(result)
                 }}
                 name="radio-buttons-group"
             >
@@ -42,9 +28,7 @@ export function Problem({ question, ans1, ans2, ans3, ans4, result, questions, s
                 <FormControlLabel value={2} control={<Radio sx={{ color: purple[800], '&.Mui-checked': { color: purple[600], }, }} />} label={ans3} />
                 <FormControlLabel value={3} control={<Radio sx={{ color: purple[800], '&.Mui-checked': { color: purple[600], }, }} />} label={ans4} />
             </RadioGroup>
-            <p>{questions}</p>
-            <p>{DefaultQuestions}</p>
-            <p>{resreturn}</p>
+            <p>{result}</p>
         </FormControl>
     )
 
